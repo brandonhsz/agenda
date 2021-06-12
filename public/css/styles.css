@@ -1,0 +1,28 @@
+body{
+  background-color: rgb(3, 31, 0);
+}
+
+.bienvenida{
+  margin: 0;
+  line-height:40px;
+  font-size: large;
+  text-shadow: 1px 1px 2px black;
+}
+
+.alerta {
+    padding: .5rem;
+    text-align: center;
+    font-size: .9rem;
+    font-weight: 900;
+    max-width: 300px;
+    margin: 0 auto 1rem auto;
+    text-transform: uppercase;
+}
+.error {
+    color: red!important;
+    background-color: rgb(255, 201, 201);
+    border: 1px solid red;
+}
+.error p {
+    color: red!important;
+}

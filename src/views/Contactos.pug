@@ -1,0 +1,16 @@
+extends MasterPage
+block Head
+  div.container
+    if contactos.length == 0
+      p.alerta.error NO HAY CONTACTOS 
+    each contacto in contactos
+      div.card
+        div.card-body
+          div.d-flex.justify-content-between 
+            a(class="btn btn-danger" href=`/modificar/${contacto.id}`) x
+            a(class="btn btn-success" href=`/eliminar/${contacto.id}`) +
+          h5.card-title.text-center #{contacto.nombre} 
+          p.card-text.text-center #{contacto.numero}
+          a(class="btn btn-primary btn-block" href=`tel:${contacto.numero}`) Llamar
+          
+  //- pre= vardump(contactos)

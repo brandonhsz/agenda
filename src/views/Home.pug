@@ -1,0 +1,15 @@
+extends MasterPage
+block Head
+  div.container
+    h1.text-center Sistema De Contactos
+    if errores
+      each error in errores
+        p.alerta.error #{error.texto}
+    form(action="/formulario" method="post")
+      div.form-group
+        label.d-block Nombre De Contacto
+        input(class="form-control" type="text" placeholder="Nombre De Contacto:" name="nombre")
+      div.form-group
+        label.d-block Numero Del Contacto
+        input(class="form-control" type="number" placeholder="Numero Del Contacto:" name="numero" )
+      input(class='btn btn-outline-success btn-lg btn-block' type="submit", value="Enviar")
